@@ -1,7 +1,7 @@
-import { animated, useSpring } from "react-spring";
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css ";
+import { animated, useSpring } from 'react-spring';
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
 const App = () => (
   <div className="App">
