@@ -16,7 +16,6 @@ const App = () => (
         <img src={logo} className="App-logo" alt="logo" />
         <h2>Welcome to my tech blog!</h2>
         <p>Here I will share my musings and general tech stuff</p>
-        <p>Also I am always hungry</p>
         <a
           className="App-link"
           href="https://reactjs.org"
