@@ -11,9 +11,8 @@ const App = () => (
         animate={{ scale: 0.9 }}
         transition={{ type: 'spring', duration: 1.8, bounce: 0.25 }}
       >
-        <h2>Welcome to my tech blog!</h2>
-        <p>Here I will share my musings and general tech stuff</p>
-        <p>Also I am always hungry</p>
+        <h2>Welcome to my blog!</h2>
+        <p>Here I will share my musings and general Shswat stuff</p>
         <a
           className="App-link"
           href="https://reactjs.org"
