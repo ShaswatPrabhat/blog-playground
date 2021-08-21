@@ -1,4 +1,4 @@
-import { animated, useSpring } from 'react-spring';
+import { motion } from 'framer-motion';
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -6,12 +6,9 @@ import './App.css';
 const App = () => (
   <div className="App">
     <header className="App-header">
-      <animated.div
-        style={useSpring({
-          config: { mass: 50, clamp: true },
-          opacity: 1,
-          from: { opacity: 0 },
-        })}
+      <motion.div
+        animate={{ scale: 0.9 }}
+        transition={{ type: 'spring', duration: 1.8, bounce: 0.25 }}
       >
         <img src={logo} className="App-logo" alt="logo" />
         <h2>Welcome to my tech blog!</h2>
@@ -25,7 +22,7 @@ const App = () => (
         >
           Learn React with me as I eat ?
         </a>
-      </animated.div>
+      </motion.div>
     </header>
   </div>
 );
