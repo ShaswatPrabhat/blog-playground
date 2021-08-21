@@ -1,12 +1,21 @@
 import styled from 'styled-components';
+import device from '../utils/break-points';
 
 export const HamburgerMenuContainer = styled.div`
   padding: 20px;
   position: fixed;
+  z-index: 100;
 `;
+
 export const HamburgerMenuIconContainer = styled.div`
   z-index: 100;
   position: fixed;
+  @media ${device('max').mobileL} {
+    bottom: 0;
+    right: 0;
+    margin-right: 30px;
+    margin-bottom: 60px;
+  }
 `;
 
 export const StyledMenu = styled.nav`
@@ -14,7 +23,8 @@ export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #282c34;
+  opacity: 1;
+  background: #000;
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
   height: 100vh;
   text-align: left;
@@ -24,8 +34,11 @@ export const StyledMenu = styled.nav`
   left: 0;
   transition: transform 0.3s ease-in-out;
 
-  @media (max-width: 576px) {
-    width: 100%;
+  @media ${device('max').mobileL} {
+    transform: ${({ open }) => {
+    if (open) return 'translateZ(-100)';
+    return 'translateZ(50)';
+  }};
   }
 
   a {
