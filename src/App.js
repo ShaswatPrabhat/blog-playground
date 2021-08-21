@@ -12,7 +12,7 @@ const App = () => (
         transition={{ type: 'spring', duration: 1.8, bounce: 0.25 }}
       >
         <h2>Welcome to my blog!</h2>
-        <p>Here I will share my musings and general Shswat stuff</p>
+        <p>Here I will share my musings and general Shaswat stuff</p>
         <a
           className="App-link"
           href="https://reactjs.org"
