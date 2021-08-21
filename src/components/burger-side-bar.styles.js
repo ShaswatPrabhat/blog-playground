@@ -10,7 +10,7 @@ export const HamburgerMenuContainer = styled.div`
 export const HamburgerMenuIconContainer = styled.div`
   z-index: 100;
   position: fixed;
-  @media ${device('max').mobileL} {
+  @media ${device('max').tablet} {
     bottom: 0;
     right: 0;
     margin-right: 30px;
@@ -25,7 +25,7 @@ export const StyledMenu = styled.nav`
   justify-content: center;
   opacity: 1;
   background: #000;
-  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
+  transform: ${({ open }) => (open ? 'translateX(100)' : 'translateX(-100%)')};
   height: 100vh;
   text-align: left;
   padding: 2rem;
@@ -34,7 +34,7 @@ export const StyledMenu = styled.nav`
   left: 0;
   transition: transform 0.3s ease-in-out;
 
-  @media ${device('max').mobileL} {
+  @media ${device('max').tablet} {
     transform: ${({ open }) => {
     if (open) return 'translateZ(-100)';
     return 'translateZ(50)';
