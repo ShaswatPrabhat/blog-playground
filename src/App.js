@@ -1,11 +1,13 @@
-import { m, LazyMotion, domAnimation } from 'framer-motion';
+import { m, LazyMotion } from 'framer-motion';
 import React from 'react';
 import './App.css';
 import BurgerSideBar from './components/burger-side-bar';
 
+const loadFeatures = () => import('./framer-motion-feature.js').then((res) => res.default);
+
 const App = () => (
   <div className="App">
-    <LazyMotion features={domAnimation}>
+    <LazyMotion features={loadFeatures}>
       <BurgerSideBar />
       <header className="App-header">
         <m.div
