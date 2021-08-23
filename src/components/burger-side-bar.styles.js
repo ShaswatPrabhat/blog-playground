@@ -27,7 +27,7 @@ export const StyledMenu = styled.nav`
   background: #000;
   transform: ${({ open }) => (open ? 'translateX(100)' : 'translateX(-100%)')};
   height: 100vh;
-  width:30vh;
+  width: 30vh;
   text-align: left;
   padding: 2rem;
   position: absolute;
@@ -40,20 +40,6 @@ export const StyledMenu = styled.nav`
     if (open) return 'translateZ(-100)';
     return 'translateZ(50)';
   }};
-  }
-
-  a {
-    font-size: 2rem;
-    padding: 2rem 0;
-    letter-spacing: 0.5rem;
-    color: #61dafb;
-    text-decoration: none;
-    transition: color 0.3s linear;
-
-    @media (max-width: 576px) {
-      font-size: 1.5rem;
-      text-align: center;
-    }
   }
 `;
 
