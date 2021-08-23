@@ -22,7 +22,6 @@ const BurgerSideBar = () => {
         />
       </HamburgerMenuIconContainer>
       <StyledMenu open={isMenuOpen}>
-        <StyledAnchor href={HOME_PATH}>Home</StyledAnchor>
         <StyledAnchor href={HOME_PATH}>About me</StyledAnchor>
         <StyledAnchor href={HOME_PATH}>Poems</StyledAnchor>
         <StyledAnchor href={HOME_PATH}>Contact me</StyledAnchor>
