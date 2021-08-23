@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { m } from 'framer-motion';
 
 export const ScreenContainer = styled.div`
   min-height: 100vh;
@@ -20,7 +21,7 @@ export const AppHeader = styled.header`
   //background-color: aqua;
 `;
 
-export const StyledAnchor = styled.a`
+export const StyledAnchor = styled(m.a)`
   font-size: 2rem;
   padding: 2rem 0;
   letter-spacing: 0.5rem;
