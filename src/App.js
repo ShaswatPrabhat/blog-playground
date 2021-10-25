@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 import BurgerSideBar from './components/burger-side-bar';
 import { AppHeader, ScreenContainer, StyledAnchor } from './App.styles';
-import { HOME_PATH } from './utils/constants';
+import { LINKS } from './utils/constants';
 
 const loadFeatures = () => import('./framer-motion-feature.js').then((res) => res.default);
 
@@ -12,7 +12,7 @@ const App = () => (
     <LazyMotion features={loadFeatures}>
       <BurgerSideBar />
       <AppHeader>
-        <StyledAnchor href={HOME_PATH}>Shaswat&apos;s blog</StyledAnchor>
+        <StyledAnchor href={LINKS.HOME_PATH}>Shaswat&apos;s blog</StyledAnchor>
       </AppHeader>
       <ScreenContainer>
         <m.div
@@ -22,14 +22,6 @@ const App = () => (
         >
           <h2>Welcome to my blog!</h2>
           <p>Here I will share my musings and general Shaswat stuff</p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React with me as I read ?
-          </a>
         </m.div>
       </ScreenContainer>
     </LazyMotion>

@@ -6,7 +6,7 @@ import {
   StyledMenu,
 } from './burger-side-bar.styles';
 
-import { HOME_PATH } from '../utils/constants';
+import { LINKS } from '../utils/constants';
 import { StyledAnchor } from '../App.styles';
 
 const framerStyledAnchorVariants = {
@@ -43,23 +43,23 @@ const BurgerSideBar = () => {
         <StyledAnchor
           variants={framerStyledAnchorVariants}
           animate={isMenuOpen ? 'opened' : 'closed'}
-          href={HOME_PATH}
+          href={LINKS.HOME_PATH}
         >
-          About me
+          Programming
         </StyledAnchor>
         <StyledAnchor
           variants={framerStyledAnchorVariants}
           animate={isMenuOpen ? 'opened' : 'closed'}
-          href={HOME_PATH}
+          href={LINKS.HOME_PATH}
+        >
+          Books
+        </StyledAnchor>
+        <StyledAnchor
+          variants={framerStyledAnchorVariants}
+          animate={isMenuOpen ? 'opened' : 'closed'}
+          href={LINKS.POEMS_PATH}
         >
           Poems
-        </StyledAnchor>
-        <StyledAnchor
-          variants={framerStyledAnchorVariants}
-          animate={isMenuOpen ? 'opened' : 'closed'}
-          href={HOME_PATH}
-        >
-          Contact me
         </StyledAnchor>
       </StyledMenu>
     </HamburgerMenuContainer>
