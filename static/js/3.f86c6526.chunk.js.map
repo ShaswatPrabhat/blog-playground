@@ -1,1 +1,0 @@
-{"version":3,"sources":["framer-motion-feature.js"],"names":["domAnimation"],"mappings":"yHAAA,mBAEeA,YAAf","file":"static/js/3.f86c6526.chunk.js","sourcesContent":["import { domAnimation } from 'framer-motion';\n\nexport default domAnimation;\n"],"sourceRoot":""}
