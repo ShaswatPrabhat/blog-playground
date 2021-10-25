@@ -1,6 +1,7 @@
 import { LazyMotion, m } from 'framer-motion';
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BurgerSideBar from './components/burger-side-bar';
 import { AppHeader, ScreenContainer, StyledAnchor } from './App.styles';
 import { LINKS } from './utils/constants';
@@ -8,6 +9,21 @@ import { LINKS } from './utils/constants';
 const loadFeatures = () => import('./framer-motion-feature.js').then((res) => res.default);
 
 const App = () => (
+  <Router>
+    <Switch>
+      <Route path="/about">
+        <Home />
+      </Route>
+      <Route path="/users">
+        <Home />
+      </Route>
+      <Route path="/">
+        <Home />
+      </Route>
+    </Switch>
+  </Router>
+);
+const Home = () => (
   <div className="App">
     <LazyMotion features={loadFeatures}>
       <BurgerSideBar />
@@ -27,5 +43,4 @@ const App = () => (
     </LazyMotion>
   </div>
 );
-
 export default App;
